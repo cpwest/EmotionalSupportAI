@@ -134,5 +134,5 @@ def EmotionAnalysis():
 # Run function at 5 minute intervals
 while(True):
         EmotionAnalysis()
-        time.sleep(10800)
+        # time.sleep(10800)
 
