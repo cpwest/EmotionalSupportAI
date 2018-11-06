@@ -100,21 +100,21 @@ def EmotionAnalysis():
                         if retweeted is False: 
                             # api.update_status("@"+ tweet_author + " Cheer Up! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
                             if randnum == 1:
-                                api.update_status("@"+ tweet_author + " Cheer Up! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " Cheer Up! Try visiting our website, it might help! www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                             elif randnum == 2:
-                                api.update_status("@"+ tweet_author + " It's gonna be okay! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " It's gonna be okay! Try visiting our website, it might help! www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                             elif randnum == 3:
-                                api.update_status("@"+ tweet_author + " We're here for you! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " We're here for you! Try visiting our website, it might help! www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                             elif randnum == 4:
-                                api.update_status("@"+ tweet_author + " Hang in there, it gets better! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " Hang in there, it gets better! Try visiting our website, it might help! www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                             elif randnum == 5:
-                                api.update_status("@"+ tweet_author + " Hey there! Seems like you might be having a rough time. Check out our website! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " Hey there! Seems like you might be having a rough time. Check out our website! www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                             elif randnum == 6:
-                                api.update_status("@"+ tweet_author + " Bad days can be tough, go to www.emotionalsupportai.org for some tips to turn things around!", in_reply_to_status_id = tweetId)  
+                                api.update_status("@"+ tweet_author + " Bad days can be tough, go to www.emotionalsupportai.org for some tips to turn things around! Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId) 
                             elif randnum == 7:
-                                api.update_status("@"+ tweet_author + " Remember you're not alone! Check out www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " Remember you're not alone! Check out www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                             elif randnum == 8:
-                                api.update_status("@"+ tweet_author + " Don't let the bad days get you down! Check out our website! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                                api.update_status("@"+ tweet_author + " Don't let the bad days get you down! Check out our website! www.emotionalsupportai.org. Don't want to hear from us? Just reply stop to this message", in_reply_to_status_id = tweetId)
                 
                 except Exception:
                     pass
