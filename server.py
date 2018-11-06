@@ -20,7 +20,7 @@ import datetime
 import tweepy
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 # Import API Keys
 from config import (consumer_key, consumer_secret, 
