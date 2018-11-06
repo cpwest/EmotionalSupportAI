@@ -1,8 +1,4 @@
 
-# coding: utf-8
-
-# In[1]:
-
 
 # Dependencies
 
@@ -20,7 +16,6 @@ import datetime
 import tweepy
 import numpy as np
 import pandas as pd
-# import matplotlib.pyplot as plt
 
 # Import API Keys
 # from config import (consumer_key, consumer_secret, 
@@ -42,7 +37,6 @@ natural_language_understanding = NaturalLanguageUnderstandingV1(
   version='2018-03-16')
 
 
-# In[3]:
 
 
 # Twitter Credentials
@@ -51,22 +45,20 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
 
-# In[5]:
 
 
 # Target Term
-# target_term = "#feelingsad"
-target_term = "lonely"
+
+target_term = "#feelingsad"
 
 
-# In[6]:
 
 
 # Define function
 def EmotionAnalysis():
     
     # Search for all tweets
-    public_tweets = api.search(target_term, count=80, result_type="recent", lang="en")
+    public_tweets = api.search(target_term, count=10, result_type="recent", lang="en")
     
     analyzed_tweets = []
     
@@ -99,13 +91,31 @@ def EmotionAnalysis():
             except Exception:
                 pass
             
-            if sadness_level > .70:
+            # create random integer
+            randnum = random.randint(1, 8)
+
+            if sadness_level > .80:
                 try:
-#                    api.update_status("Hello @"+ tweet_author + "! It seems like you're having a rough time. Try visiting our website, it might help! www.emotionalsupportai.org")
                      if in_reply is None:
                         if retweeted is False: 
-                            api.update_status("@"+ tweet_author + " Cheer Up! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
-                    
+                            # api.update_status("@"+ tweet_author + " Cheer Up! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            if randnum == 1:
+                                api.update_status("@"+ tweet_author + " Cheer Up! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            elif randnum == 2:
+                                api.update_status("@"+ tweet_author + " It's gonna be okay! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            elif randnum == 3:
+                                api.update_status("@"+ tweet_author + " We're here for you! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            elif randnum == 4:
+                                api.update_status("@"+ tweet_author + " Hang in there, it gets better! Try visiting our website, it might help! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            elif randnum == 5:
+                                api.update_status("@"+ tweet_author + " Hey there! Seems like you might be having a rough time. Check out our website! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            elif randnum == 6:
+                                api.update_status("@"+ tweet_author + " Bad days can be tough, go to www.emotionalsupportai.org for some tips to turn things around!", in_reply_to_status_id = tweetId)  
+                            elif randnum == 7:
+                                api.update_status("@"+ tweet_author + " Remember you're not alone! Check out www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                            elif randnum == 8:
+                                api.update_status("@"+ tweet_author + " Don't let the bad days get you down! Check out our website! www.emotionalsupportai.org", in_reply_to_status_id = tweetId)
+                
                 except Exception:
                     pass
                 
@@ -118,9 +128,8 @@ def EmotionAnalysis():
             
 
             
+ 
             
-            
-#             print(json.loads(jsonified_response)["emotion"]["document"]["emotion"]["sadness"])
 
            
             
@@ -130,10 +139,7 @@ def EmotionAnalysis():
 
 
 
-# In[ ]:
-
-
-# Run function at 5 minute intervals
+# Run function at 3 hour intervals
 while(True):
         EmotionAnalysis()
         time.sleep(10800)
