@@ -23,8 +23,8 @@ import pandas as pd
 # import matplotlib.pyplot as plt
 
 # Import API Keys
-from config import (consumer_key, consumer_secret, 
-                    access_token, access_token_secret)
+# from config import (consumer_key, consumer_secret, 
+                    # access_token, access_token_secret)
 
 
 is_prod = os.environ.get('IS_HEROKU', None)
