@@ -43,12 +43,6 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
 
-# In[4]:
-
-
-api.update_status("again! again! again! again! again! again! again! learning twitter")
-
-
 # In[5]:
 
 
@@ -134,5 +128,5 @@ def EmotionAnalysis():
 # Run function at 5 minute intervals
 while(True):
         EmotionAnalysis()
-        # time.sleep(10800)
+        time.sleep(10800)
 
